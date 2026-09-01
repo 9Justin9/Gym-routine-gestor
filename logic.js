@@ -7,11 +7,12 @@ class Exercise {
         this.weight = weight
     }
     volume () {
-        return(this.sets * this.reps * this.weight + " kg")
+        console.log(`If you do ${this.sets} sets of ${this.reps} reps with ${this.weight} kg,
+you would have done a volume of ${this.sets * this.reps * this.weight} kg.`)
     }
 };
 
 // Exercises
 const benchPress = new Exercise("Bench Press", 3, 8, 85);
-console.log(benchPress.volume());
 console.log(benchPress);
+benchPress.volume();
