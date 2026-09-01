@@ -16,3 +16,7 @@ you would have done a volume of ${this.sets * this.reps * this.weight} kg.`)
 const benchPress = new Exercise("Bench Press", 3, 8, 85);
 console.log(benchPress);
 benchPress.volume();
+
+const weightedPullUps = new Exercise("Weighted Pull-up's", 3, 8, 17.5);
+console.log(weightedPullUps);
+weightedPullUps.volume();
