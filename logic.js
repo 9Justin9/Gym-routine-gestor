@@ -22,12 +22,28 @@ class Day {
         console.log(`You have successfully added the exercise: ${Exercise.name}`)
     }
     deleteExercise (Exercise) {
-        this.ejercicios.pop(Exercise)
-        console.log(`You have successfully added the exercise: ${Exercise.name}`)
+        const index = this.ejercicios.indexOf(Exercise)
+        this.ejercicios.splice(index, 1)
+        console.log(`You have successfully deleted the exercise: ${Exercise.name}`)
     }
     info () {
         const names = this.ejercicios.map(exercise => exercise.name).join(", ") // AI supported
         console.log(`The day ${this.name} contains the next exercises: ${names}.`)
+    }
+};
+
+class Routine {
+    constructor (name, ...days) {
+        this.name = name
+        this.days = days
+    }
+    daysOfTheRoutine () {
+        const nameDays = this.days.map(day => day.name).join(", ")
+        console.log(`The routine "${this.name}" contains this days: ${nameDays}.`)
+    }
+    addDay (Day) {
+        this.days.push(Day)
+        console.log(`You have successfully added the day ${Day.name} to the routine ${this.name}.`)
     }
 };
 
@@ -53,3 +69,9 @@ tuesday.info();
 
 const wensday = new Day("Wensday", hackSquat);
 wensday.info();
+
+// Routine
+const pushPullLegs = new Routine("Push Pull Legs", monday);
+pushPullLegs.addDay(tuesday);
+pushPullLegs.addDay(wensday);
+pushPullLegs.daysOfTheRoutine();
