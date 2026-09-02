@@ -67,11 +67,11 @@ monday.info();
 const tuesday = new Day("Tuesday", weightedPullUps);
 tuesday.info();
 
-const wensday = new Day("Wensday", hackSquat);
-wensday.info();
+const wednesday = new Day("Wednesday", hackSquat);
+wednesday.info();
 
 // Routine
 const pushPullLegs = new Routine("Push Pull Legs", monday);
 pushPullLegs.addDay(tuesday);
-pushPullLegs.addDay(wensday);
+pushPullLegs.addDay(wednesday);
 pushPullLegs.daysOfTheRoutine();
