@@ -41,7 +41,3 @@ Como extra profesional para optimizar tu tiempo esta semana:
 
 * El proyecto debe estar guardado en una carpeta limpia de tu ordenador.
 * Debe incluir un archivo oculto .git (inicializado con Git) listo para ser subido a la nube.
-
-Si te parece bien el alcance, ¿cómo prefieres avanzar?
-Escribimos juntos el código de la tercera clase (la clase Gimnasio) para conectar las rutinasTe enseño la lógica matemática exacta para eliminar un ejercicio del array por su nombre
-
