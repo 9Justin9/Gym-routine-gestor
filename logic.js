@@ -49,6 +49,10 @@ class Routine {
         this.days.push(Day);
         console.log(`You have successfully added the day ${Day.name} to the routine ${this.name}.`);
     }
+    info () {
+        const names = this.ejercicios.map(exercise => exercise.name).join(", "); // AI supported
+        console.log(`The routine ${this.name} contains the next days: ${names}.`);
+    }
 }
 
 // Exercises
@@ -62,20 +66,20 @@ const hackSquat = new Exercise("Hack Squat", 3, 15, 50);
 hackSquat.volume();
 
 // Days
-const monday = new Day("Monday", benchPress, weightedPullUps);
-monday.addExercise(hackSquat);
-monday.deleteExercise(hackSquat);
-monday.deleteExercise(weightedPullUps);
-monday.info();
+const push = new Day("Push", benchPress, weightedPullUps);
+push.addExercise(hackSquat);
+push.deleteExercise(hackSquat);
+push.deleteExercise(weightedPullUps);
+push.info();
 
-const tuesday = new Day("Tuesday", weightedPullUps);
-tuesday.info();
+const pull = new Day("Pull", weightedPullUps);
+pull.info();
 
-const wednesday = new Day("Wednesday", hackSquat);
-wednesday.info();
+const legs = new Day("Legs", hackSquat);
+legs.info();
 
 // Routine
-const pushPullLegs = new Routine("Push Pull Legs", monday);
-pushPullLegs.addDay(tuesday);
-pushPullLegs.addDay(wednesday);
+const pushPullLegs = new Routine("Push Pull Legs", push);
+pushPullLegs.addDay(pull);
+pushPullLegs.addDay(legs);
 pushPullLegs.daysOfTheRoutine();
